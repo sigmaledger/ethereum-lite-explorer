@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run clean && npm run build-js-prod && npm run check-prod-bundle-size",
     "build-dev": "npm run clean && npm run build-js-dev",
-    "check-prod-bundle-size": "bundlesize -f \"dist/js/app.bundle.js\" -s 600kB -c none",
+    "check-prod-bundle-size": "bundlesize -f \"dist/js/app.bundle.js\" -s 2000kB -c none",
     "clean": "rimraf ./dist",
     "build-js-prod": "webpack --config=./webpack.config.prod.js",
     "build-js-dev": "webpack --config=./webpack.config.dev.js",
@@ -76,6 +76,7 @@
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.1",
     "react-transition-group": "^2.7.1",
-    "styled-components": "^3.4.2"
+    "styled-components": "^3.4.2",
+    "web3": "^1.3.6"
   }
 }

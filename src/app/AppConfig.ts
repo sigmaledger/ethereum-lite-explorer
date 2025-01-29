@@ -9,6 +9,7 @@ interface IAppConfigData {
     APP_SENTRY_APPNAME?: string;
     APP_SENTRY_DSN?: string;
     APP_SENTRY_ENV?: string;
+    APP_NODE_URL?: string;
     GOOGLE_ANALYTICS_ID?: string;
     HOTJAR_ID?: string;
 
@@ -73,6 +74,10 @@ export class AppConfig {
             appName: this.data.APP_SENTRY_APPNAME,
             env: this.data.APP_SENTRY_ENV
         };
+    }
+
+    getEthNodeUrl() {
+        return this.data.APP_NODE_URL || "";
     }
 
     getGoogleAnalyticsId() {

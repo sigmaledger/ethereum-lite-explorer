@@ -12,6 +12,8 @@ const [,, inFile, outFile] = process.argv;
 let defaultConfig = JSON.parse(fs.readFileSync(path.resolve(inFile), "utf-8"));
 
 if (process.env.APP_NODE_URL) {
+    defaultConfig["APP_NODE_URL"] = process.env.APP_NODE_URL;
+
     let pluginConfigs = defaultConfig["plugins"];
     if (Array.isArray(pluginConfigs)) {
         let litePluginConfig = pluginConfigs.find(plugin => plugin.uri.match(/^plugin:\/\/aleth.io\/eth-lite/)).config;

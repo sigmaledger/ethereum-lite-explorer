@@ -2,6 +2,7 @@
     "GOOGLE_ANALYTICS_ID": null,
     "HOTJAR_ID": null,
     "SENTRY_ENABLED": false,
+    "APP_NODE_URL": "https://mainnet.infura.io/",
 
     "pluginsUrl": "plugins",
 

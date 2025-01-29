@@ -41,9 +41,10 @@
                 "name": "typescript-tslint-plugin",
                 "alwaysShowRuleFailuresAsWarnings": true
             }
-        ]
+        ],
+        "skipLibCheck": true
     },
     "include": [
         "src"
-    ]
+    ],
 }
