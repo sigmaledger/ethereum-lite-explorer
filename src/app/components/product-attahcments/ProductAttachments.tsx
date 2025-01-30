@@ -108,6 +108,10 @@ const ValuesFlex = styled.div`
     }
 `;
 
+const LabelNoHeight = styled(Label)`
+    height: auto;
+`;
+
 export function ProductAttachments(props: {
     nodeUrl: string;
 }) {
@@ -165,10 +169,10 @@ export function ProductAttachments(props: {
         <Content>
             <CenteredDiv>
                 <Title>
-                    Product Attachments
+                    Product Details
                 </Title>
                 <Subtitle>
-                    Enter Product Address to see its attachments
+                    Enter Product ID to see its details
                 </Subtitle>
                 <InlineSearchContent>
                     <InlineSearchInnterContent>
@@ -176,14 +180,14 @@ export function ProductAttachments(props: {
                             <SearchIcon/>
                         </SearchIconContainer>
                         <SearchBoxContainer>
-                            <form>
+                            <form onSubmit={ e => e.preventDefault() }>
                                 <SearchBox type="text"
                                            autoComplete="off"
                                            autoCorrect="off"
                                            spellCheck={ false }
                                            value={ searchTerm }
                                            onChange={ e => setSearchTerm(e.target.value) }
-                                           placeholder="Product Address..."/>
+                                           placeholder="Product ID..."/>
                             </form>
                         </SearchBoxContainer>
                     </InlineSearchInnterContent>
@@ -213,7 +217,7 @@ export function ProductAttachments(props: {
                             </ValuesFlex>
 
                             <ValuesFlex>
-                                <Label>Questions Hash</Label>
+                                <LabelNoHeight>Compliance Questions Hash</LabelNoHeight>
                                 <ValueBox>
                                     <Hash useEllipsis={false}>
                                         { attachments.questionsHash || "" }
@@ -222,7 +226,7 @@ export function ProductAttachments(props: {
                             </ValuesFlex>
 
                             <ValuesFlex>
-                                <Label>Answers Hash</Label>
+                                <LabelNoHeight>Compliance Answers Hash</LabelNoHeight>
                                 <ValueBox>
                                     <Hash useEllipsis={false}>
                                         { attachments.answersHash || "" }

@@ -102,8 +102,8 @@ export class App extends React.Component<IAppProps> {
                                     <AppLogo/>
                                 </Link>
                             </ToolbarItem>
-                            <ToolbarItem title="Product Attachments">
-                                <ReactLink to="/product-attachments">
+                            <ToolbarItem title="Product Details">
+                                <ReactLink to="/product-details">
                                     <HoverState>
                                         { (hover) =>
                                             <IconButton Icon={ ContractIcon } color={ (
@@ -148,7 +148,7 @@ export class App extends React.Component<IAppProps> {
                                 <SidebarMenuWrapper sidebarMobileStore={ sidebarMobileStore }/>
                             </TopBar>
                         </ToolbarWrapper>
-                        <Route path="/product-attachments"
+                        <Route path="/product-details"
                                render={() => <ProductAttachments nodeUrl={this.props.appConfig.getEthNodeUrl()}/>} />
                         { routes }
                     </Page>
